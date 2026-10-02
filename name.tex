@@ -1,0 +1,319 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6, 21 May 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.4cm,bottom=1.4cm,columnsep=0.8cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+
+% If using pdflatex:
+% \usepackage[rm]{roboto}
+% \usepackage[defaultsans]{lato}
+% \usepackage{tgadventor}
+% \usepackage[sfdefault]{AlegreyaSans}
+\usepackage{cmbright}
+% \usepackage[sfdefault]{biolinum}
+\usepackage{pifont}
+% \usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{academicons}
+\usepackage{relsize}
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightestGrey}{HTML}{D3D3D3}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{CoolBlack}{HTML}{002E63}
+\definecolor{OxfordBlue}{HTML}{4771AD}
+\colorlet{name}{black}
+\colorlet{personalinfo}{OxfordBlue}
+\colorlet{heading}{OxfordBlue}
+\colorlet{headingrule}{LightestGrey}
+\colorlet{accent}{black}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+%\usepackage[colorlinks,linkcolor=OxfordBlue,citecolor=red,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\LARGE\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+\begin{document}
+\name{Neelkamal Somisetty}
+% \tagline{Your Position or Tagline Here}
+
+\personalinfo{
+  \tag{\faEnvelope}\info{\href{mailto:neelkamalsomisetty96@gmail.com} {neelkamalsomisetty96@gmail.com}}
+%   \homepage{}
+%   \linkedin{LinkedIn}{linkedin.com/in/vishal-mohanty}
+  \printinfo{\faLinkedin}{LinkedIn}[https://www.linkedin.com/in/neelkamal-somisetty-ph-d-1b973911b/]
+  \printinfo{\faGithubSquare}{GitHub}[https://github.com/Neelkamal18]
+  \printinfo{\faGoogle}{Google Scholar}[https://scholar.google.com/citations?hl=en]
+  \phone{+1-979-777-2845}
+%   \github{your_id}
+%   \orcid{0000-0000-0000-0000}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.341}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\vspace{-0.5em}
+\cvsection{\large Education}
+\vspace{-0.25em}
+
+\cvproject{\small Texas A\&M University}{\small Ph.D. Mechanical Engineering \hspace{0.07em} GPA: 4.0/4.0}{\small 2021-2024}{\small Advisor: {\color{OxfordBlue}\href{https://engineering.tamu.edu/mechanical/profiles/darbha-swaroop.html}{Dr.Swaroop Darbha}}}
+
+\cvproject{\small Texas A\&M University}{\small M.S. Mechanical Engineering}{\small 2018-2021}{}
+
+\cvproject{\small IIT Madras}{\small B.Tech Mechanical Engineering}{\small 2014-2018}{}
+
+\vspace{-0.5em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Skills}
+
+\vspace{-0.75em}
+\cvevent{\small Languages \& Software Tools}{}{\vspace{-0.25em}\color{black} Python, Julia, C++, OpenCV, ROS, MATLAB, Gurobi, CPLEX, Git, Gazebo, PyBullet, Docker, Streamlit, Linux}
+\vspace{-0.5em}
+\cvevent{\small ML \& Data}{}{\vspace{-0.25em}\color{black} PyTorch, TensorFlow, Keras, CUDA, Scikit-learn, BigQuery, SQL, Dataflow, Stable-Baselines3, OpenAI Gymnasium}
+
+\vspace{-0.5em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Selected Courses}
+\vspace{-0.25em}
+
+\color{black} \textbf{Modern Computer vision}, \textbf{Robotic software and perception}, \textbf{Machine learning}, \textbf{Sensor fusion}, Data structures and algorithms, Combinatorial and Convex optimization, Spectral Graph Theory, Control systems, Statistics
+
+\vspace{-0.25em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Publications}
+\vspace{-0.25em}
+
+
+\begin{itemize}
+    \item \textbf{Somisetty, N.}, et al., (2024, Jul). {\color{OxfordBlue}\href{https://ieeexplore.ieee.org/abstract/document/10605101}{{Optimal Robust Network Design: Formulations and Algorithms for Maximizing Algebraic Connectivity}}}. IEEE TCNS
+    \vspace{-0.3em}
+    \item \textbf{Somisetty, N.}, et al., (2024, Dec). {\color{OxfordBlue}\href{https://arxiv.org/abs/2409.15506}{Spectral Graph Theoretic Methods for Enhancing Network Robustness in Robot Localization}}. IEEE CDC
+    \vspace{-0.3em}
+    \item \textbf{Somisetty, N.}, et al., (2025). Optimal Spectral Sparsification for Pose-Graph SLAM by Maximizing Algebraic Connectivity. IEEE RAL
+    \vspace{-0.3em}
+    \item \textbf{Somisetty, N.}, et al., (2025). Heuristic Sparsification for Pose-Graph SLAM by Maximizing Algebraic Connectivity. IEEE ICRA
+    \vspace{-0.3em}
+    \item \textbf{Somisetty, N.} and Darbha, S. (2024, Dec). {\color{OxfordBlue}\href{https://arxiv.org/abs/2411.07540}{Lateral String Stability in Autonomous and Connected Vehicle Platoons}}. IEEE ICVES
+    \vspace{-0.3em}
+    \item \textbf{Somisetty, N.}, et al., (2023, Sept). {\color{OxfordBlue}\href{https://ieeexplore.ieee.org/abstract/document/10422222}{Impact of Ordering of Heterogeneous Vehicles on String Stability.}} IEEE ITSC
+    \vspace{-0.3em}
+    \item  Liu, M., \textbf{Somisetty, N.}, et al., (2025). {\color{OxfordBlue}\href{https://arxiv.org/abs/2011.03587}{Robust Lateral Control of a Convoy of Autonomous and Connected Vehicles with Limited Preview}}. IEEE ITS
+    \vspace{-0.25em}
+\end{itemize}
+
+% \divider
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+\vspace{-0.45em}
+\cvsection{\large Professional Experience}
+\vspace{-0.5em}
+
+\cvproject{\small Autonomy Intern}{\href{https://www.monarchtractor.com/}{\small Monarch Tractor}}{\small September 2023 - May 2024}{ \small
+\begin{itemize}
+    \item \textbf{Trained} and evaluated the \textbf{SuperPoint CNN} using PyTorch on real and synthetic farm datasets, achieving efficient feature matching compared to SIFT and ORB
+    \vspace{-0.4em}
+    \item Designed a GPS-independent localization library using ROS for \textbf{sensor fusion of IMU, LiDAR, and visual odometry,} achieving precise positioning
+    \vspace{-0.4em}
+    \item Developed a bundle adjustment pipeline with a baseline constraint for a multi-view stereo, \textbf{enhancing 3D reconstruction accuracy by 11\% }in SfM
+\end{itemize}}
+\vspace{-0.5em}
+
+\cvproject{\small Research Intern}{\small Applied Mathematics and Plasma Physics, Los Alamos National Laboratory}{\small May 2023 - August 2023}{\color{red}
+\begin{itemize}
+    \item Trained and evaluated the \textbf{SuperPoint neural network} using PyTorch on farm datasets, achieving efficient feature matching compared to SIFT
+    \vspace{-0.4em}
+    \item Designed a GPS-independent localization library using ROS for sensor fusion of IMU, LiDAR, and visual odometry, achieving precise positioning  
+ \end{itemize}}
+\vspace{-0.5em}
+
+\cvproject{\small Graduate Research Assistant}{{\href{https://autonomy-its.engr.tamu.edu}{\small Systems, Controls and Applied Optimization Laboratory}}}{\small January  2020 - May 2023}{
+\begin{itemize}
+    \item Integrated research in \textbf{robotics, optimization, AI, and spectral graph theory} 
+    \vspace{-0.4em}
+    \item Designed formulations and algorithms to represent mathematical programs and optimize complex physical systems, including \textbf{robust network design} challenges
+    \vspace{-0.4em}
+    \item Utilized convex and discrete optimization techniques to \textbf{sparsify large-scale networks} for \textbf{UAV cooperative localization} and \textbf{pose-graph SLAM} applications
+    \vspace{-0.4em}
+    \item Developed an \textbf{optimality-based} \textbf{cutting-plane algorithm} for a \textbf{mixed-integer semidefinite program}, efficiently solving small-scale NP-complete problems
+    \vspace{-0.4em}
+    \item Devised \textbf{heuristic methods} for \textbf{enhancing network resilience} in UAV cooperative localization, and contributed to the development of \href{https://github.com/harshangrjn/LaplacianOpt.jl}{\color{OxfordBlue}\textbf{LaplacianOpt.jl}}, a Julia-based package for network analysis
+    \vspace{-0.4em}
+    \item Developed a \textbf{neighborhood search heuristic} for SLAM pose graph sparsification, cutting memory usage by \textbf{15\%} and boosting computational efficiency by \textbf{23\%}
+\end{itemize}}
+
+
+\vspace{-0.75em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Selected Projects}
+\vspace{-0.25em}
+
+\cvproject{\small Natural Language-Guided Robotic Assistant}{}{\small 2024}{
+    \begin{itemize}
+        \item Designed a multi-modal robotic system integrating \textbf{VLMs}, \textbf{RL}, and the \textbf{BERT NLP model} to interpret and execute language-based instructions
+        \vspace{-0.4em}
+        \item Developed a \textbf{custom OpenAI Gym}-compatible environment to train \textbf{RL policies (PPO)} leveraging VLMs for \textbf{vision-language grounding} and \textbf{task planning}
+        \vspace{-0.4em}
+        \item Implemented a robust framework combining \textbf{CLIP} with ROS, enabling robots to perform dynamic tasks like \textbf{object manipulation and navigation}
+    \end{itemize}
+}
+
+\vspace{-0.5em}
+\cvproject{\small Cycle-GAN for Sim-to-Real Domain Adaptation}{}{\small 2024}{
+    \begin{itemize}
+        \item Developed a \textbf{CycleGAN} model to translate simulated robotic environments into realistic images, enhancing the \textbf{generalization of robotic perception systems}
+        \vspace{-0.4em}
+        \item Improved task performance by bridging the \textbf{sim-to-real gap}, enabling robotic systems trained in simulation to perform effectively in real-world environments
+    \end{itemize}
+}
+
+\vspace{-0.5em}
+\cvproject{\small Pose-Graph Sparsification for Multi-Session SLAM in UGVs}{}{\hspace{-0.5em}\small 2023}{
+    \begin{itemize}
+        \item Processed LiDAR data from multiple sessions using \textbf{Fast-LIO2 for odometry}, and utilized \textbf{ScanContext} and \textbf{DiSCo-SLAM} for detecting \textbf{loop closures}
+        \vspace{-0.4em}
+        \item Performed offline processing to construct and sparsify pose graphs using heuristics developed in \href{https://github.com/harshangrjn/LaplacianOpt.jl}{\color{OxfordBlue}\textbf{LaplacianOpt.jl}}
+        \vspace{-0.4em}
+        \item Conducted qualitative analysis with \textbf{LiDAR point clouds} and \textbf{GPS visualizations}, and quantitatively evaluated sparsifications using \textbf{GTSAM} and \textbf{SE-Sync} libraries 
+    \end{itemize}
+}
+\vspace{-0.5em}
+\cvproject{\small Deep Reinforcement Learning for Supply Chain}{}{\small 2023}{
+    \begin{itemize}
+        \item Reformulated a mixed-integer linear program as a Markov Decision Process and built a \textbf{custom OpenAI Gymnasium environment} to \textbf{test on-policy} and \textbf{off-policy algorithms}
+        \vspace{-0.4em}
+        \item Evaluated DRL approaches, including \textbf{PPO} and \textbf{DDPG}, against integer programming, demonstrating its
+\textbf{effectiveness in handling dynamic constraints}
+    \end{itemize}
+}
+\vspace{-0.5em}
+\cvproject{\small Path Planning for KUKA Robotic Arm}{}{\small 2023}{
+    \begin{itemize}
+        \item Designed a \textbf{grid-based $A^*$ search algorithm} for path planning through maze and simulated the \textbf{robotic arm’s motion in ROS and Gazebo} for real-time testing
+        \vspace{-0.4em}
+        \item Optimized algorithms by integrating heuristic enhancements, \textbf{bidirectional search strategies,} and \textbf{memory-eﬀicient data structures}, achieving real-time planning
+    \end{itemize}
+}
+\vspace{-0.5em}
+\cvproject{\small Sentiment Analysis for YELP reviews using BERT}{}{\small 2022}{
+    \begin{itemize}
+        \item Built a {\color{OxfordBlue}\href{https://github.com/Neelkamal18/Sentiment_analysis_for_YELP_reviews}{sentiment analysis pipeline}} using \textbf{transformer-based models}, incorporating techniques like \textbf{tokenization} and \textbf{attention mechanisms} to classify customer feedback with high accuracy and contextual understanding
+    \end{itemize}
+}
+\vspace{-0.5em}
+\cvproject{\small RAG for Knowledge-Enhanced NLP Applications}{}{\small 2024}{
+    \begin{itemize}
+        \item Leveraged \textbf{RAG} to integrate external knowledge into \textbf{NLP workflows}, enhancing accuracy and contextual relevance in query resolution
+        \vspace{-0.4em}
+        \item Built a scalable \textbf{RAG pipeline} combining \textbf{pre-trained language models} with real-time \textbf{retrieval systems} to deliver efficient and knowledge-driven text generation
+    \end{itemize}
+}
+
+
+
+%\cvproject{Lateral Feedback Controller for Vehicles}{Advisor: Dr.Swaroop Darbha}{2019}{
+%    \begin{itemize}
+%        \item 
+%    \end{itemize}
+%}
+
+%\cvproject{\href{https://www.raftarformularacing.com}{\small RAFTAR: FORMULA STUDENT TEAM}}{}{\small 2015-2017}
+%{
+%    \begin{itemize}
+%        \item 
+%    \end{itemize}
+%}
+
+%\divider
+
+%\cvsection{Notable Awards}
+
+%\begin{itemize}
+%    \item Department of Energy graduate research fellowship (2020 - 2024).
+%    \item Professor Rayudu Memorial fellowship at IIT Madras (2014 - 2018).
+%    \item KVPY Scholar (2014) - awarded by the Government of India.
+%\end{itemize}
+
+%\cvsection{Publications}
+
+%\nocite{*}
+
+%\printbibliography[heading=none,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+%\printbibliography[heading=none,title={\printinfo{\faFile*[regular]}{Journal Articles}},type=article]
+
+% \begin{itemize}
+%     \item Auditing Indian Elections, \href{https://www.springer.com/gp/book/9783030306243}{\color{Red}LNCS Electronic Voting 2019} 
+%     \item Threshold implementation of AES S-Box on FPGA,  \href{https://ieeexplore.ieee.org/abstract/document/8641387}{\color{Red}IEEE Embedded Systems Letters 2019}
+% \end{itemize}
+
+\end{paracol}
+
+
+\end{document}

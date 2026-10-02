@@ -1,0 +1,201 @@
+%%%%%%%%%%%%%%%%%
+% AltaCV one-page resume — Feb26 content + requested updates
+%%%%%%%%%%%%%%%%
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+\geometry{left=1.2cm,right=1.2cm,top=1.2cm,bottom=1.2cm,columnsep=0.7cm}
+
+\usepackage{paracol}
+\usepackage{enumitem}
+\usepackage{microtype}
+\setlist[itemize]{leftmargin=1.05em,itemsep=0.16em,parsep=0pt,topsep=0.1em,partopsep=0pt}
+
+% Uniform spacing — scaled to fill the page
+\newcommand{\cvgap}{\par\vspace{0.42em}}
+\newcommand{\cvdiv}{\par\vspace{0.34em}\divider\par\vspace{0.1em}}
+\renewcommand{\cvsection}[1]{%
+  \par\vspace{0.55em}%
+  \nointerlineskip
+  {\color{heading}\MakeUppercase{\cvsectionfont{#1}}\par}%
+  \vspace{0.28em}%
+}
+\makeatletter
+\patchcmd{\cvproject}{\smallskip}{\vspace{0.16em}}{}{}
+\makeatother
+
+\usepackage{cmbright}
+\usepackage{pifont}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{academicons}
+\usepackage{relsize}
+
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightestGrey}{HTML}{D3D3D3}
+\definecolor{OxfordBlue}{HTML}{4771AD}
+\colorlet{name}{black}
+\colorlet{personalinfo}{OxfordBlue}
+\colorlet{heading}{OxfordBlue}
+\colorlet{headingrule}{LightestGrey}
+\colorlet{accent}{black}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\input{pubs-authoryear}
+\addbibresource{sample.bib}
+
+\begin{document}
+% Ragged2e only stretches 2em, so slightly long lines spill into the next column.
+\setlength{\RaggedRightRightskip}{0pt plus 1fil}
+\setlength{\RaggedRightParfillskip}{0pt plus 1fil}
+\raggedright
+\name{Reyshwanth Ganeshan}
+
+\personalinfo{
+  \email{greyshwanth@gmail.com}
+  \printinfo{\faLinkedin}{LinkedIn}[https://www.linkedin.com/in/reyshwanth]
+  \printinfo{\faGoogle}{Google Scholar}
+  \phone{+1-979-422-3392}
+}
+
+\makecvheader
+\linespread{1.03}\selectfont
+\columnratio{0.34}
+
+\begin{paracol}{2}
+\cvsection{\large Education}
+
+\cvproject{\small Texas A\&M University}{\small Ph.D.\ Mech.\ Eng., GPA: 3.5*/4.0}{\small 2023--2027}{\small Advisor: {\color{OxfordBlue}\href{https://engineering.tamu.edu/mechanical/profiles/rathinam-sivakumar.html}{Dr.\ Sivakumar Rathinam}}}
+\cvproject{\small Texas A\&M University}{\small M.S.\ (Thesis) Mech.\ Eng., GPA: 4.0/4.0}{\small 2021--2023}{}
+\cvproject{\small IIT Madras}{\small B.Tech.\ Mechanical Engineering}{\small 2017--2021}{}
+
+\cvdiv
+\cvsection{\large Skills}
+{\small
+\noindent\textbf{Programming:} C++, Python, ROS/ROS2, OpenCV, Julia, Docker, Git\par
+\noindent\textbf{ML:} Pytorch, Tensorflow, CUDA, SQL, Stable-Baselines3, Gymnasium\par
+\noindent\textbf{Tools:} Gurobi, CPLEX, PostgreSQL, QGIS, Gazebo, Unity, IsaacSim, MATLAB\par
+}
+
+\cvdiv
+\cvsection{\large Selected Courses}
+{\small\hyphenpenalty=10000\exhyphenpenalty=10000\noindent
+\textbf{Convex Opt.}, \textbf{Deep RL}, \textbf{ML}\par
+\noindent\textbf{Autonomous Decision Making}\par
+\noindent Intelligent Transportation Systems\par
+\noindent Algorithms, Nonlinear Control\par
+\noindent Control Design, Statistics\par
+}
+
+\cvdiv
+\cvsection{\large Publications}
+{\small\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{itemize}
+    \item \textbf{R.\ Ganeshan}, et al.\ \\
+      Cooperative~\textbf{MAPPO}.\\
+      \emph{Submitted to ICRA}
+    \item N.\ Kumar, \textbf{R.\ Ganeshan}, et al.\ (2026).\\
+      {\color{OxfordBlue}\href{https://arxiv.org/abs/2606.29673}{Privacy-Preserving}}\\
+      {\color{OxfordBlue}\href{https://arxiv.org/abs/2606.29673}{Cooperative Localization}}. \emph{IROS 2026}
+    \item \textbf{R.\ Ganeshan}, et al.\ (2026).\\
+      {\color{OxfordBlue}\href{https://arc.aiaa.org/doi/10.2514/6.2026-1201}{Bi-Objective Dynamic Zone Navigation}}.\\
+      \emph{AIAA SciTech 2026}
+    \item N.\ Kumar, \textbf{R.\ Ganeshan}, et al.\ (2026).\\
+      {\color{OxfordBlue}\href{https://arc.aiaa.org/doi/10.2514/6.2026-1091}{UAS Fleet Planning in GPS-Denied~Environments}}.\\
+      \emph{AIAA SciTech 2026}
+    \item \textbf{R.\ Ganeshan}, et al.\ (2025).\\
+      {\color{OxfordBlue}\href{https://arc.aiaa.org/doi/10.2514/6.2025-2161}{Multi-Domain UGV-UAV Path Planning}}.\\
+      \emph{AIAA SciTech 2025}
+    \item \textbf{R.\ Ganeshan}, S.\ Darbha (2024).\\
+      {\color{OxfordBlue}\href{https://doi.org/10.1016/j.ifacol.2024.07.321}{Diagnostic ML for Vehicle Air Brakes}}.~\emph{IFAC}
+\end{itemize}
+}
+
+\cvdiv
+\cvsection{\large Achievements}
+{\small\hyphenpenalty=10000\exhyphenpenalty=10000
+\begin{itemize}
+\item Led a 35-person \textbf{AV} team to two straight \textbf{2nd-place} Autodrive finishes~(2024--25)
+\item Led the team to Autodrive overall \textbf{2nd} among 10 teams across 5 years
+\item Co-led a 45-person \textbf{FSAE} team; Formula Bharat 2020 National Champions
+\item Top \textbf{0.16\%} in \textbf{IIT-JEE Advanced 2017} among \textbf{1.2M} candidates
+\end{itemize}
+}
+
+\switchcolumn
+{\hyphenpenalty=10000\exhyphenpenalty=10000
+\cvsection{\large Professional Experience}
+
+\cvproject{\small Team Captain}{\small {\color{OxfordBlue}\href{https://www.youtube.com/watch?v=yfAE5uTY3LE}{GM SAE Autodrive Challenge II}}}{\small Aug 2023 -- June 2026}{\small
+\begin{itemize}
+    \item Scored constraint-aware \textbf{MPC} trajectories on rasterized costmaps, using that safety metric to compare obstacle avoidance before on-vehicle runs
+    \item Set up autonomous vehicle behavior with behavior trees on the \textbf{Nav2} stack
+    \item Deployed \textbf{L4} vehicle with multi-sensor fusion for robust pose estimation
+    \item Built \textbf{LiDAR SLAM} with probabilistic filtering for GPS-denied urban localization
+    \item \textbf{PointPillar} + \textbf{YOLOv8} multi-class detection at \textbf{80\,ms} (Deer/Barrel/Barricade)
+    \item Multi-modal \textbf{LiDAR/Radar/camera} tracking for fog, glare, and rainy conditions
+\end{itemize}}
+\cvgap
+
+\cvproject{\small Vehicle Software Intern}{\small Tesla Inc.}{\small Aug 2022 -- Dec 2022}{\small
+\begin{itemize}
+    \item Built \textbf{HIL Firmware Regression Testers} for Tesla vehicles (S/3/X/Y and more)
+    \item Python/\textbf{CAN} testing for safety-critical maneuvers (ABS); \textbf{60\%} faster testing
+\end{itemize}}
+\cvgap
+
+\cvproject{\small Graduate Research Assistant}{\small Autonomous Systems Lab}{\small Aug 2023 -- Present}{\small
+\begin{itemize}
+    \item Evaluated \textbf{DeepRL} against A$^*$/Dijkstra for GPS-denied routing, outdoor demos
+    \item Developed multi-agent navigation algorithms with outdoor UAV-UGV demos
+    \item Applied research in \textbf{robotics, AI, and multi-agent navigation}
+\end{itemize}}
+\cvgap
+
+\cvproject{\small Research Intern, Localization \& Mapping}{\small {\color{OxfordBlue}\href{https://www.plus.ai/}{Plus AI}}}{\small Aug 2026 -- Nov 2026}{\small
+\begin{itemize}
+    \item \textbf{LiDAR localization}: runtime gains; fusion under uncertainty/adverse conditions
+    \item \textbf{Automapping} pipeline to flag remaps and manage 3D LiDAR map health
+    \item Learning-based \textbf{BEV} model to auto-update HD maps on road geometry change
+\end{itemize}}
+
+\cvdiv
+\cvsection{\large Selected Projects}
+
+\cvproject{\small Bi-Objective Dynamic Zone Avoidance}{\small Texas A\&M University}{\small Jan 2025 -- June 2025}{\small
+\begin{itemize}
+    \item Designed multi-objective A$^*$ risk metrics that turn UAV danger into a numeric cost, traded off against traversal time in shape-changing zones
+    \item \textbf{BOA*} planning for dynamic zone navigation on fixed-wing aircraft
+    \item Proximity-based risk scoring; \textbf{72\%} faster convergence via better exploration
+\end{itemize}}
+\cvgap
+
+\cvproject{\small Uncertainty-Gated Coverage (GPS-Denied)}{\small Submitted to ICRA}{\small Sept 2025 -- Present}{\small
+\begin{itemize}
+    \item Evaluated multi-agent \textbf{DeepRL} vs RH-MPC (\textbf{83\%} vs \textbf{46\%}) on gated coverage
+    \item Added cooperative \textbf{EKF} ranging; ablating it cuts high-drift coverage \textbf{96\%} to \textbf{69\%}
+    \item Built \textbf{7$\times$7} egocentric crops enabling \textbf{zero-shot} transfer to 30$\times$30 maps ($\sim$\textbf{99.6\%})
+\end{itemize}}
+\cvgap
+
+\cvproject{\small Multi-Domain UAV-UGV Team}{\small Texas A\&M University}{\small Aug 2024 -- Dec 2024}{\small
+\begin{itemize}
+    \item Deployed UAV-UGV team with \textbf{GPLA*} for search and rescue
+    \item Costmap avoidance and replanning on Clearpath Huskys (LiDAR)
+    \item \textbf{Gazebo} validation with UR5 clearing and online graph replanning
+\end{itemize}}
+\cvgap
+
+\cvproject{\small Privacy-Preserving Range (GPS-Denied)}{\small Texas A\&M University}{\small Oct 2025 -- Jan 2026}{\small
+\begin{itemize}
+    \item Built \textbf{privacy-preserving} \textbf{SDP}/\textbf{MVE} localization with dual-only exchange
+    \item Derived convex range-pair constraints that tighten sets beyond spherical bounds
+    \item Deployed \textbf{UWB}-\textbf{EKF} localization on UAV-UGV (2 drones + Husky; 300$\times$150\,ft)
+\end{itemize}}
+}
+
+\end{paracol}
+\end{document}

@@ -1,0 +1,17 @@
+---
+description: Always recompile the CV PDF after any content or layout change
+alwaysApply: true
+---
+
+# Always Recompile PDF
+
+After any edit to the CV (especially `rey.tex` or related `.tex` / `.cls` / `.bib` files), always recompile before ending the turn.
+
+```bash
+cd /home/reyshwanth/onepagecv && latexmk -pdf -g -interaction=nonstopmode rey.tex
+```
+
+- Do not wait for the user to ask to recompile
+- Prefer a forced rebuild (`-g`) so the PDF is fresh
+- Confirm the build succeeded (e.g. pages written / `rey.pdf` updated)
+- If the compile fails, fix the error and recompile again in the same turn

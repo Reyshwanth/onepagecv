@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.11 (19/6/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,letterpaper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{multicol}
+
+\usepackage[scale=0.95,top=0.4cm,bottom=0.4cm]{geometry} % Reduce document margins
+\setlength{\hintscolumnwidth}{2cm} % Uncomment to change the width of the dates column
+\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Neelkamal} % Your first name
+\familyname{Somisetty} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+%\title{Resume}
+
+
+%\address{11050, Strathmore Dr.}{Apt. 126, Los Angeles, 90024}    
+\mobile{Mobile: 979.777.2845}                    
+\email{Email: neelkamalsomisetty96@gmail.com}            
+\social[linkedin][https://www.linkedin.com/in/neelkamal-somisetty-ph-d-1b973911b/]{LinkedIn} 
+\extrainfo{\httplink[Google Scholar]{scholar.google.com/citations?user=E1cjmCUAAAAJ}} 
+%\extrainfo{\httplink[GitHub]{https://github.com/Neelkamal18}}
+
+
+%\extrainfo{Birthdate: 25/08/1997\\ Nationality: Indian}
+
+%\homepage{https://www.linkedin.com/pub/daniele-perrotta/64/5b9/794} {staff.org.edu/$\sim$jsmith} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+%\extrainfo{additional information}
+%\photo[70pt][0pt]{pictures/campus-seal_copy.jpg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+%\quote{"A witty and playful quotation" - John Smith}
+
+%----------------------------------------------------------------------------------------
+\vspace*{-7mm}
+\begin{document}
+
+\makecvtitle % Print the CV title
+\vspace*{-15mm}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-2mm}
+\section{Education}
+\vspace*{-1mm}
+\cventry{2021--2024}{Texas A\&M University}{Ph.D. in Mechanical Engineering}{}{}{}
+
+\cventry{2018--2021}{Texas A\&M University}{M.S. in Mechanical Engineering}{}{}{}
+
+\cventry{2014--2018}{Indian Institute of Technology Madras}{B.Tech in Mechanical Engineering}{}{}{}
+
+
+%----------------------------------------------------------------------------------------
+%	COURSE WORK AND SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-4mm}
+\section{Relevant Skills}
+\vspace*{-1mm}
+%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+\cvitem{Software}{Python, OpenCV, C++, Julia, GCP, Kubernetes, Docker}
+\cvitem{ML \& Data}{PyTorch, TensorFlow, Keras, CUDA, Scikit-Learn, BigQuery, SQL, Dataflow, Apache Beam}
+\cvitem{Graphics}{Unreal Engine, Unity, Blender, VTK}
+
+
+%----------------------------------------------------------------------------------------
+%	PROFESSIONAL EXPERIENCE
+%----------------------------------------------------------------------------------------
+\vspace*{-4mm}
+\section{Professional Experience}
+\vspace*{-1mm}
+
+\cventry{Aug 2021--
+Present}{Machine Learning Engineer, Simulation ML team, Cruise}{}{}{}{\emph{Manager: Ignacio Martin Bragado, Collaborators: Ashish Shrivastava, Luyu Yang; Location: San Francisco, California}}
+\cvlistitem{Experimenting with models based on \textbf{Diffusion Transformers} to enable \textbf{style transfer} for generating photorealistic versions of synthetic camera videos created using physical simulators.}
+\cvlistitem{Designed methods to validate realism of simulations for evaluating \textbf{Large Transformer-based Driving Models} used for encoding scenes; Able to invalidate \textbf{8\%} of simulations automatically to avoid misevaluations.}
+\cvlistitem{Developed a \textbf{StyleGAN}-based model utilizing \textbf{approximately paired training} to enhance LiDAR simulation realism. Observed a \textbf{9\% increase in Average Precision} across classes in downstream perception models.}
+\cvlistitem{Trained a \textbf{cycleGAN} on synthetic and real data to improve photorealism of synthetic images. Observed a \textbf{4\% parity increase} when comparing models trained on synthetic and real data.}
+\cvlistitem{Contributed to the development of \textbf{synthetic data generation} pipelines using a physics-based \emph{Unreal Engine} simulator; Achieved a data generation rate of \textbf{1 million multi-sensor frames per 30 minutes}. }
+\cvlistitem{Addressed long-tail data scarcity in perception models by generating synthetic data for scenarios like school buses.}
+\cvlistitem{Conducted \textbf{ablation studies} to analyze the performance of downstream perception models on tasks such as \textbf{3-D Object Detection} and \textbf{Vehicle State Detection}, resulting in an \textbf{optimal 3:1 ratio} of real to synthetic data.}
+
+
+%\cventry{Jun 2016--
+%Aug 2016}{Robot Assisted Technology for Healing Neurological Ailments (RATHNA)}{}{}{}{Guide: Dr. Gaurav Bhutani, Dr. %Venkata P. P. K., Dept. of Remote Handling and Robotics, BARC, Mumbai, India}
+
+%\cvlistitem{Designed algorithms for localizing, isolating and visualizing the tumor in the brain using 3D %reconstruction.}
+%\cvlistitem{The algorithms are in clinical trials at the National Institute of Mental Health and Neurosciences, %Bangalore.}
+
+\cventry{May 2016--
+Jul 2019}{Part-time Developer, Computer Vision Division, Detect Technologies}{}{}{}{\emph{Guide: Prof. Krishnan Balasubramanian, Dept. of Mechanical Engineering, IIT Madras, Chennai, India}}
+%\cvlistitem{Supervised a team of 6 people collaborating on the development of Vision and Graphics software using %\emph{Python}.}
+\cvlistitem{Developed a system to autonomously render faults detected on an industrial asset onto a 3D model for visualization.}
+\cvlistitem{The developed algorithms decreased time taken for the fault marking procedure for each asset by \textbf{75\%}.}
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH SECTION
+%----------------------------------------------------------------------------------------
+%\section{Course Projects}
+
+%\cvitem{Nov 2017}{Visualization and Tool Path Planning for milling operations using Bezier Surfaces in MATLAB.}
+
+%\cvitem{May 2017}{Modification of Subpixel Phase Shift Convolutional Neural Networks used for Super Resolution of images.}
+\vspace*{-4mm}
+\section{Research Experience}
+\vspace*{-1mm}
+
+\cventry{Oct 2020--
+June 2021}{Learning Realistic Expressions for a Biomechanical Face}{}{}{}{\emph{Master's Thesis, Advisor: Prof. Demetri Terzopoulos, UCLA Computer Science, Los Angeles, USA}}
+
+\cvlistitem{Recreated anatomically consistent facial expressions in a Biomechanical Face model using Machine Learning.}
+\cvlistitem{Quantified emotion using \textbf{facial landmark detection} and mapped it to muscle activation by \textbf{training a MLP}.}
+
+\cventry{Sep 2019--
+Oct 2020}{Synthetic Dataset Generation for Improvement of 3D Human Pose Estimation}{}{}{}{\emph{Guide: Dr. Masaki Nakada, NeuralX, Los Angeles, USA}}
+
+\cvlistitem{Developed algorithms to generate mocap-based \textbf{synthetic 3D pose datasets} using \emph{Python}, \emph{Blender} and \emph{Unity}.}
+\cvlistitem{Iteratively improved features of the dataset by training a \textbf{ResNet-101} and evaluating the results on real data.}
+\cvlistitem{Achieved creation of a dataset with \textbf{1 million frames in just 10 hours} which is able to replace existing datasets.}
+
+\cventry{Oct 2018--
+May 2019}{Deep Learning for Autonomous Defect Detection (DLADR)}{}{}{}{\emph{Master's Thesis, Advisor: Prof. Krishnan Balasubramanian, IIT Madras, Chennai, India}}
+\cvlistitem{Implemented a \textbf{Mask R-CNN} in \emph{Keras} with a \emph{Tensorflow} backend to detect defects in automotive parts.}
+\cvlistitem{Designed software to \textbf{synthetically produce X-ray training data} using \textbf{multiprocessing} and \textbf{Ray Casting}.}
+\cvlistitem{Reduced the industrial cycle time for defect detection by \textbf{50-80\%} with an increase in the probability of detection.}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+\vspace*{-4mm}
+\section{Publications and Presentations}
+\vspace*{-1mm}
+
+\cvitem{Jan 2023}{\href{https://patents.google.com/patent/US20240220681}{Ashish Shrivastava, \textbf{Surya Dwarakanath}, et al., U.S. Patent, "Noise modeling using Machine Learning"}}
+
+\cvitem{Oct 2021}{\href{https://dl.acm.org/doi/10.1007/978-3-030-90439-5_10}{Xiao S. Zeng*, \textbf{Surya Dwarakanath*} et al.; "Neuromuscular Control of the Face-Head-Neck Biomechanical Complex with Learning-Based Expression Transfer from Images and Videos", ISVC 2021.}}
+
+%\cvitem{Dec 2017}{\href{https://doi.org/10.1007/978-981-10-8597-0_5}{Surya Dwarakanath et al.; "Generalized Point %Correspondence Algorithm for Neuro-registration", iNaCoMM 2017}}
+
+%\cvitemwithcomment{Dutch}{Basic}{Basic words and phrases only}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+%\clearpage
+
+%\recipient{HR Department}{Corporation\\123 Pleasant Lane\\12345 City, State} % Letter recipient
+%\date{\today} % Letter date
+%\opening{Dear Sir or Madam,} % Opening greeting
+%\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{curriculum vit\ae{}} % List of enclosed documents
+
+%\makelettertitle % Print letter title
+
+%\lipsum[1-3] % Dummy text
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
+
+

@@ -1,0 +1,244 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.6, 21 May 2021) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+%% AltaCV uses the fontawesome5 and packages.
+%% See http://texdoc.net/pkg/fontawesome5 for full list of symbols.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.4cm,bottom=1.4cm,columnsep=0.8cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+
+% If using pdflatex:
+% \usepackage[rm]{roboto}
+% \usepackage[defaultsans]{lato}
+% \usepackage{tgadventor}
+% \usepackage[sfdefault]{AlegreyaSans}
+\usepackage{cmbright}
+% \usepackage[sfdefault]{biolinum}
+\usepackage{pifont}
+% \usepackage{sourcesanspro}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{academicons}
+\usepackage{relsize}
+% Change the colours if you want to
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\definecolor{LightestGrey}{HTML}{D3D3D3}
+\definecolor{DarkPastelRed}{HTML}{450808}
+\definecolor{PastelRed}{HTML}{8F0D0D}
+\definecolor{GoldenEarth}{HTML}{E7D192}
+\definecolor{CoolBlack}{HTML}{002E63}
+\definecolor{OxfordBlue}{HTML}{4771AD}
+\colorlet{name}{black}
+\colorlet{personalinfo}{OxfordBlue}
+\colorlet{heading}{OxfordBlue}
+\colorlet{headingrule}{LightestGrey}
+\colorlet{accent}{black}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{black}
+%\usepackage[colorlinks,linkcolor=OxfordBlue,citecolor=red,urlcolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\LARGE\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% Use (and optionally edit if necessary) this .tex if you
+%% want to use an author-year reference style like APA(6)
+%% for your publication list
+\input{pubs-authoryear}
+
+%% Use (and optionally edit if necessary) this .tex if you
+%% want an originally numerical reference style like IEEE
+%% for your publication list
+% \input{pubs-num}
+
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+\begin{document}
+\name{Reyshwanth Ganeshan}
+% \tagline{Your Position or Tagline Here}
+
+\personalinfo{
+  \tag{\faEnvelope}\info{\href{mailto:greyshwanth@gmail.com}{greyshwanth@gmail.com}}
+  \printinfo{\faLinkedin}{LinkedIn}[https://www.linkedin.com/in/reyshwanth]
+  \printinfo{\faGoogle}{Google Scholar}[https://scholar.google.com/citations?hl=en]
+\printinfo{\faCircle}{Website}[https://reyshwanth-portfolio.webflow.io/]
+
+
+  \phone{+1-979-422-3392}
+}
+
+\makecvheader
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.341}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\vspace{-0.5em}
+\cvsection{\large Education}
+\vspace{-0.25em}
+
+\cvproject{\small Texas A\&M University}{\small Ph.D. Mechanical Engineering \hspace{0.07em} GPA: 3.5*/4.0}{\small 2023-2027}{\small Advisor: {\color{OxfordBlue}\href{https://engineering.tamu.edu/mechanical/profiles/rathinam-sivakumar.html}{Dr.Sivakumar Rathinam}}}
+\cvproject{\small Texas A\&M University}{\small M.S. (Thesis) Mechanical Engineering \hspace{0.07em} GPA: 4.0/4.0}{\small 2021-2023}{}
+
+\cvproject{\small IIT Madras}{\small B.Tech. Mechanical Engineering }{\small 2017-2021}{}
+
+\vspace{-0.5em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Skills}
+
+\vspace{-0.75em}
+\cvevent{\small Programming}{}{\vspace{-0.25em}\color{black} C++, Python, ROS/ROS2, OpenCV, Julia, Docker, PostgreSQL, QGIS, CPLEX, Gurobi, Git}
+\vspace{-0.5em}
+\cvevent{\small ML \& Data}{}{\vspace{-0.25em}\color{black} Pytorch, Tensorflow, CUDA, SQL, Stable-Baselines3, Gymnasium}
+\vspace{-0.5em}
+\cvevent{\small Simulation}{}{\vspace{-0.25em}\color{black} Gazebo, Unity, IsaacSim, MATLAB}
+
+\vspace{-0.5em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Selected Courses}
+\vspace{-0.25em}
+
+\color{black} \textbf{Convex Optimization}, \textbf{Deep Reinforcement Learning}, \textbf{Decision Making for Autonomous Systems}, \textbf{Machine Learning}, Analysis of Algorithms, Intelligent Transportation Systems, Design of Non Linear Control Systems, Control Systems Design, Statistics in Research
+
+\vspace{-0.25em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Publications}
+\vspace{-0.25em}
+
+\begin{itemize}
+    \item \textbf{R. Ganeshan}, et al., (2026). {\color{OxfordBlue}\href{https://arc.aiaa.org/doi/10.2514/6.2026-1201}{Bi-Objective Dynamic Zone Navigation}}\emph{AIAA SCITECH 2026 Forum}
+    \vspace{-0.3em}
+    \item N. Kumar, \textbf{R. Ganeshan}, et al., (2026). {\color{OxfordBlue}\href{https://arc.aiaa.org/doi/10.2514/6.2026-1091}{Coordination and Planning Algorithms for a UAS Fleet in GPS-Denied Environments}} \emph{AIAA SCITECH 2026} 
+    \vspace{-0.3em}
+    \item \textbf{R. Ganeshan}, et al., (2025). {\color{OxfordBlue}\href{https://arc.aiaa.org/doi/10.2514/6.2025-2161}{Multi-Domain UGV-UAV Team Path Planning}}. \emph{AIAA SCITECH 2025 Forum}
+    \vspace{-0.3em}
+    \item \textbf{R. Ganeshan}, S. Darbha. (2024). {\color{OxfordBlue}\href{https://doi.org/10.1016/j.ifacol.2024.07.321}{A Diagnostic Machine Learning Algorithm for Air Brakes in Commercial Vehicles}}. \emph{IFAC-PapersOnLine}
+\end{itemize}
+
+\vspace{-0.25em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Achievements}
+\vspace{-0.25em}
+\begin{itemize}
+\item \small Led an \textbf{autonomous car competition} team of 35 to consecutive \textbf{2nd Place} finishes {\color{OxfordBlue}\href{https://www.youtube.com/watch?v=yfAE5uTY3LE}{Autodrive Challenge II}}(2024,2025)
+\item \small Co-led an \textbf{FSAE} team of 45 and declared \textbf{National Champions} amongst 60 teams at \href{https://www.formulabharat.com/}{Formula Bharat 2020}
+\vspace{-0.3em}
+\item \small Emerged in the top \textbf{0.16\%} of \textbf{IIT-JEE Advanced 2017} Exam amongst \textbf{1.2 million candidates}
+\vspace{-0.3em}
+\end{itemize}
+
+
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+\vspace{-0.45em}
+\cvsection{\large Professional Experience}
+\vspace{-0.5em}
+
+\cvproject{\small \href{https://www.youtube.com/watch?v=yfAE5uTY3LE}{SAE Autodrive Challenge - II}}{Team Captain}{\small Aug 2023 - Present}{
+    \begin{itemize}
+        \item Developed and deployed \textbf{L4 autonomous vehicle} with integrated \textbf{IMU, GNSS, wheel encoder} for robust \textbf{pose estimation}
+        \item Implemented \textbf{LiDAR scan matching} algorithms and \textbf{probabilistic filtering} for \textbf{GPS-denied localization} and real-time mapping in urban environments
+        \item Built a fully custom \textbf{vehicle behavior} stack using ROS2 Nav2, utilizing processed \textbf{HD Map} data and inputs from perception and V2X modules.
+        \item Engineered an automated \textbf{CI/CD} pipeline for fully containerized \textbf{Docker} environments, leveraging \textbf{Kubernetes} and \textbf{AWS} for scalable testing and deployment.
+    \end{itemize}
+}
+
+\cvproject{\small Graduate Research Assistant}{\small Autonomous Systems Lab}{\small Aug 2023 - Present}{ \small
+\begin{itemize}
+    \item Integrated Applied Research in \textbf{robotics, AI and multi-agent navigation}
+    \vspace{-0.4em}
+    \item Developed \textbf{multi-agent} navigation algorithms for \textbf{multi-objective} applications using heterogenous agents, with \textbf{real-world demos} using \textbf{UAV-UGV} teams
+    \vspace{-0.4em}
+    \item Compared use of DeepRL as well as conventional methods (A*, Dijkstra etc.) to solve multi-agent routing in GPS denied environments, with outdoor demos
+ \end{itemize}}
+\vspace{-0.5em}
+\cvproject{\small Vehicle Software Intern}{\small Tesla Inc.}{\small Aug 2022 - Dec 2022}{ \small
+\begin{itemize}
+    \item Built \textbf{HIL Firmware Regression Testers} for all Tesla Vehicles(S,3,X,Y and more)
+    \item Set up firmware testing on Python over \textbf{CAN} while performing safety critical maneuvers such as ABS braking improving testing speed by over \textbf{60\%}
+\end{itemize}}
+\vspace{-0.5em}
+\vspace{-0.75em}
+\divider
+\vspace{-0.5em}
+
+\cvsection{\large Selected Projects}
+
+
+\cvproject{\small GPS Denied Multi Agent Coverage}{\small Texas A\&M University}{\small Sept 2025- Current}{ \small
+\begin{itemize}
+    \item Set up and demonstrated \textbf{outdoor GPS-denied} landmark-based coordination algorithms for a heterogenous team of UAVs and UGVs
+    \item Used \textbf{MAPPO} with attention augmented \textbf{Actor-Critic} on custom GPS-Denied coverage environments for \textbf{Persistent Target Coverage} with \textbf{Fixed Wing Agents}
+    \item Implemented a novel, robust and fast \textbf{convex optimization based} state estimation using landmark range information only - replacing traditional EKF methods
+
+\end{itemize}}
+
+\cvproject{\small Bi-Objective Dynamic Zone Avoidance}{\small Texas A\&M University}{\small Jan 2025 - June 2025}{ \small
+\begin{itemize}
+    \item Implemented and improved \textbf{graph/search-based motion planning} using \textbf{BOA* (Bi-Objective A*)} for dynamic zone navigation using \textbf{fixed wing aircrafts}
+    \item Formulated \textbf{cost functions and optimization frameworks} balancing \textbf{risk vs traversal time} in trajectory selection
+    \item Developed \textbf{geometry-based path reasoning} with \textbf{grid-based planners} handling \textbf{mobile, dynamic, shape-changing zones} and \textbf{time-varying risk fields}
+    \item Designed novel \textbf{cost functions} using \textbf{proximity-based risk scoring mechanisms} for safe trajectory planning
+    \item Improved algorithm \textbf{convergence speed} by 72\% through enhanced \textbf{exploration strategies} in complex environments
+\end{itemize}}
+
+
+\cvproject{\small Multi-Domain UAV-UGV Team}{\small Texas A\&M University}{\small Aug 2024 - Dec 2024}{ \small
+\begin{itemize}
+    \item Developed and deployed a UAV-UGV team using \textbf{GPLA*} (Generalized Permanaent Labelling algorithm) for Search and Rescue Applications 
+    \item Implemented costmap based \textbf{dynamic obstacle avoidance} and re-planning on Clearpath Huskys using LiDAR and nav2 software stacks
+    \item Validated the autonomous stack in \textbf{Gazebo}, demonstrating multi-agent coordination and obstacle clearing using \textbf{UR5 Arm} attached to the UGV
+    \item Extended the scope of the algorithm by adding \textbf{online replanning} with dynamic graph updates, enabling real world deployment
+\end{itemize}}
+
+
+
+\end{paracol}
+
+\end{document}
